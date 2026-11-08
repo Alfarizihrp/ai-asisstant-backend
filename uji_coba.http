@@ -1,0 +1,6 @@
+POST http://127.0.0.1:8000/api/chat
+Content-Type: application/json
+
+{
+    "perintah": "Tolong ingatkan saya jam 10 pagi nanti mau lanjut ngerjain skripsi"
+}
