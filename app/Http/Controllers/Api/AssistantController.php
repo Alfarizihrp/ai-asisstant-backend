@@ -90,7 +90,9 @@ class AssistantController extends Controller
             return response()->json(['response' => $dataAI['pesan']]);
         }
 
-        // Cadangan terakhir jika format JSON meleset
-        return response()->json(['response' => $teksBalasan]);
+        // CADANGAN UTAMA: Jika format di atas lolos tapi masih kosong, kirim teks mentahnya
+        return response()->json([
+            'response' => $teksBalasan ?? 'Halo Alfarizi, sistem merespons tapi teks kosong.'
+        ]);
     }
-}
+    }
